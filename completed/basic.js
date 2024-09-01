@@ -13,12 +13,15 @@ let myVariable = 5; // let for mutable variables
 myVariable = 10;
 
 const myConstant = 10; // const for immutable variables
+const boolean = false;
+const myNull = null;
+const myUndefined = undefined;
 
 //* Functions
 
 // function declaration, that takes a name argument
 function greet(name) {
-	console.log(`Hello ${name}`);
+	console.log(`Hello ${name}`); // Template string
 }
 
 // arrow function syntax
@@ -28,19 +31,15 @@ const goodbye = (name) => {
 
 //* Conditionals and ternary operators
 const isOldEnough = (age) => {
-	if (typeof age !== "number") {
-		console.log("Please enter a number");
-	} else if (age >= 18) {
-		console.log("You are old enough");
-		return true;
+	if (age >= 21) {
+		return "Welcome stranger";
 	} else {
-		console.log("You are not old enough");
-		return false;
+		return "No youngins allowed";
 	}
 };
 
 // Single line version with ternary operator
-const saloonGreeting = (age) =>
+const isOldEnoughArrow = (age) =>
 	age >= 21 ? "Welcome stranger" : "No youngins allowed";
 
 // Other operators

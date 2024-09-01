@@ -30,6 +30,7 @@ console.log(pikachuXP + charizardXP);
 try {
 	const divisor = 0;
 	const result = 10 / divisor; // Error
+	console.log(result);
 } catch (error) {
 	console.log(error);
 }
