@@ -48,7 +48,7 @@ const person2 = {
 const { name: name1, age: age1 } = person;
 const { name: name2, age: age2 } = person2;
 
-//* Handling null and undefined values, nullish coalescing operator
+//* Handling null and undefined values, nullish coalescing operator and optional chaining
 const goalKeeper = {
 	number: 20,
 	shots: undefined,
@@ -70,7 +70,7 @@ const forward = {
 
 const player = Math.random() > 0.5 ? goalKeeper : forward;
 
-// console.log(goalKeeper.shots.onTarget); // Possible error
+// console.log(goalKeeper.shots.onTarget); // Possible error, so optional chain
 console.log(player.shots?.onTarget ?? "No shots"); // undefined, or "No shots"
 
 //* Combining objects
